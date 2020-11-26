@@ -1,0 +1,250 @@
+{
+	"info": {
+		"_postman_id": "5355b70e-cf23-4eff-a87e-51f41453f8c0",
+		"name": "API_TEST 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Post",
+			"item": [
+				{
+					"name": "Create User",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "93d7ed80-debf-486c-a05c-10acbf41788b",
+								"exec": [
+									"pm.test(\"Server is present\", function () {\r",
+									"    pm.response.to.have.header('Server');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Via is present\", function () {\r",
+									"    pm.response.to.have.header('Via');\r",
+									"});\r",
+									"pm.test(\"Expect-CT is present\", function () {\r",
+									"    pm.response.to.have.header('Expect-CT');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Morpheus\",\r\n    \"job\": \"Leader\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/users",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						},
+						"description": "Delete a User\r\nhttps://reqres.in/api/users/2"
+					},
+					"response": []
+				},
+				{
+					"name": "User login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "8d010791-1365-464a-81ee-29befb38b3ea",
+								"exec": [
+									"pm.test(\"Server is present\", function () {\r",
+									"    pm.response.to.have.header('Server');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Via is present\", function () {\r",
+									"    pm.response.to.have.header('Via');\r",
+									"});\r",
+									"pm.test(\"Expect-CT is present\", function () {\r",
+									"    pm.response.to.have.header('Expect-CT');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"cityslicka\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/api/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"login"
+							]
+						},
+						"description": "Delete a User\r\nhttps://reqres.in/api/users/2"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Get",
+			"item": [
+				{
+					"name": "Get all employee Data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4f16010b-b4d2-47bb-a864-77f5832d0317",
+								"exec": [
+									"pm.test(\"status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Server is present\", function () {\r",
+									"    pm.response.to.have.header('Server');\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"total_pages\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users?page=2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get a single employee data",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ad9ca734-4176-4e19-ab06-dfe2fe6528a7",
+								"exec": [
+									"pm.test(\"status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Server is present\", function () {\r",
+									"    pm.response.to.have.header('Server');\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"last_name\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/users/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						},
+						"description": "Employee Id"
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Delete",
+			"item": [
+				{
+					"name": "Delete an employee record",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "29aeddfb-5821-409a-8ed9-6be90646f297",
+								"exec": [
+									"pm.test(\"Server is present\", function () {\r",
+									"    pm.response.to.have.header('Server');\r",
+									"});\r",
+									"pm.test(\"Body matches string\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"\");\r",
+									"});\r",
+									"pm.test(\"Via is present\", function () {\r",
+									"    pm.response.to.have.header('Via');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/v1/delete/2",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

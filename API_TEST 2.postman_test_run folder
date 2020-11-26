@@ -1,0 +1,233 @@
+{
+	"id": "fc85f6d8-0d9d-42b6-b3f2-c4a4103d2979",
+	"name": "API_TEST 2",
+	"timestamp": "2020-11-26T20:02:42.324Z",
+	"collection_id": "5355b70e-cf23-4eff-a87e-51f41453f8c0",
+	"folder_id": 0,
+	"environment_id": "7d046f3b-6673-4313-a1ee-1338e94bbcfe",
+	"totalPass": 15,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "781c2d3b-25c9-4548-b68d-b7ed5f12d315",
+			"name": "Create User",
+			"url": "https://reqres.in//api/users",
+			"time": 886,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"status code is 404": true,
+				"Server is present": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Server is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				886
+			],
+			"allTests": [
+				{
+					"status code is 404": true,
+					"Server is present": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "7c4f16f4-22f5-4121-a41f-461d9aace527",
+			"name": "User login",
+			"url": "https://reqres.in//api/login",
+			"time": 440,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"status code is 404": true,
+				"Server is present": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Server is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				440
+			],
+			"allTests": [
+				{
+					"status code is 404": true,
+					"Server is present": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "61cdbb08-5a11-49d8-89be-61106ce56476",
+			"name": "Get all employee Data",
+			"url": "https://reqres.in//api/v1/employees",
+			"time": 398,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"status code is 404": true,
+				"Server is present": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Server is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				398
+			],
+			"allTests": [
+				{
+					"status code is 404": true,
+					"Server is present": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "e1728d1a-4502-4fc3-a592-77f538994543",
+			"name": "Get a single employee data",
+			"url": "https://reqres.in//api/v1/employee/1",
+			"time": 298,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"status code is 404": true,
+				"Server is present": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Server is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				298
+			],
+			"allTests": [
+				{
+					"status code is 404": true,
+					"Server is present": true,
+					"Body matches string": true
+				}
+			]
+		},
+		{
+			"id": "0559af84-c24b-4e73-8da5-6610a28852f5",
+			"name": "Delete an employee record",
+			"url": "https://reqres.in//api/v1/delete/2",
+			"time": 350,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"status code is 404": true,
+				"Server is present": true,
+				"Body matches string": true
+			},
+			"testPassFailCounts": {
+				"status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Server is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body matches string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				350
+			],
+			"allTests": [
+				{
+					"status code is 404": true,
+					"Server is present": true,
+					"Body matches string": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2372,
+	"collection": {
+		"requests": [
+			{
+				"id": "781c2d3b-25c9-4548-b68d-b7ed5f12d315",
+				"method": "POST"
+			},
+			{
+				"id": "7c4f16f4-22f5-4121-a41f-461d9aace527",
+				"method": "POST"
+			},
+			{
+				"id": "61cdbb08-5a11-49d8-89be-61106ce56476",
+				"method": "GET"
+			},
+			{
+				"id": "e1728d1a-4502-4fc3-a592-77f538994543",
+				"method": "GET"
+			},
+			{
+				"id": "0559af84-c24b-4e73-8da5-6610a28852f5",
+				"method": "DELETE"
+			}
+		]
+	}
+}
